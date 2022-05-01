@@ -13,7 +13,7 @@ from motor.motor_asyncio import AsyncIOMotorClient
 load_dotenv()
 
 # Подключение к кластеру
-client = AsyncIOMotorClient(os.getenv("URL_DB", "mongodb://localhost:27017"))
+client = AsyncIOMotorClient(os.getenv("URL_DB", "mongodb://localhost:27017"), ssl=False)
 # Получение коллекции
 documents = client.InterDB.documents
 
