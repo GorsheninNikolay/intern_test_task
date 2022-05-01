@@ -1,4 +1,7 @@
 # Тестовое задание для стажера
+[![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
+[![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
+[![Docker Automated buil](https://img.shields.io/docker/automated/mongkok/coverage.svg)](https://hub.docker.com/r/mongkok/coverage)
 
 - [Тестовое задание для стажера](#тестовое-задание-для-стажера)
 - [Как запускать?](#как-запускать)
