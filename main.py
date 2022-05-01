@@ -105,7 +105,7 @@ async def get_documents(request: web.Request) -> str:
         ).sort('created_data')
 
         # Формируем ответ
-        ans["results"] = await data.to_list(length=20)
+        ans["result"] = await data.to_list(length=20)
 
         return web.json_response(ans)
     except Exception as error:

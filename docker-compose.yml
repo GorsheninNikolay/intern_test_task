@@ -29,7 +29,7 @@ services:
       - xpack.security.enabled=false
   
   web:
-    build: .
+    image: gorsheninnikolay/intern_task
     restart: always
     container_name: my_application
     command: python main.py
