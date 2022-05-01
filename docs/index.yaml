@@ -1,0 +1,10 @@
+tags:
+  - Document
+summary: Creating indices
+produces:
+  - text/plain
+responses:
+  "200":
+    description: "Data has already been created."
+  "201":
+    description: "Data has been successfully created."

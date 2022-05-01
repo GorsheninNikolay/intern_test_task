@@ -1,0 +1,41 @@
+version: '3.9'
+
+
+services:
+
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    restart: always
+    ports:
+      - "27000:27017"
+  
+  mongo_seed:
+    image: mongo
+    links:
+      - mongodb
+    volumes:
+      - ./mongo_seed:/mongo_seed
+    command:
+      /mongo_seed/import.sh
+
+  elasticsearch:
+    image: gorsheninnikolay/elasticsearch
+    container_name: es
+    ports:
+      - "9200:9200"
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+  
+  web:
+    build: .
+    restart: always
+    container_name: my_application
+    command: python main.py
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongodb
+      - elasticsearch
+

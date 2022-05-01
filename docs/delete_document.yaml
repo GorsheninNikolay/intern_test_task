@@ -1,0 +1,16 @@
+tags:
+- Document
+summary: Delete document
+required: true
+parameters:
+- in: path
+  name: document_id
+  schema:
+    type: integer
+responses:
+  "200":
+    description: successful operation
+  "204":
+    description: document doesn`t exists
+  "400":
+    description: Id is not integer
